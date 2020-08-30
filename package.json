@@ -1,0 +1,28 @@
+{
+  "name": "goodreads-quotes",
+  "version": "0.0.1",
+  "description": "Easily get static quotes from Goodreads",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanto/goodreads-quotes.git"
+  },
+  "author": "Sumanto Biswas <sumanto@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sumanto/goodreads-quotes/issues"
+  },
+  "homepage": "https://github.com/sumanto/goodreads-quotes#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.1"
+  }
+}
