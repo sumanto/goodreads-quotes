@@ -11,7 +11,7 @@ function init() {
         return;
     }
 
-    data = fs.readFileSync('./quotes.json', {
+    data = fs.readFileSync('quotes.json', {
         encoding:'utf8',
         flag:'r'
     });

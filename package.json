@@ -1,5 +1,5 @@
 {
-  "name": "goodreads-quotes",
+  "name": "quotes-goodreads",
   "version": "0.0.1",
   "description": "Easily get static quotes from Goodreads",
   "main": "index.js",
