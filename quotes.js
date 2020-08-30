@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path');
 const _ = require('lodash');
 const fs = require('fs');
 
@@ -11,7 +12,7 @@ function init() {
         return;
     }
 
-    data = fs.readFileSync('quotes.json', {
+    data = fs.readFileSync(path.resolve(__dirname, 'quotes.json'), {
         encoding:'utf8',
         flag:'r'
     });
