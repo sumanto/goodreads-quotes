@@ -1,9 +1,10 @@
 # quotes-goodreads
 
+Easily get access to Goodreads quotes. This is a static list, and doesn't make connection to the Goodreads website.
+
 The Quotes Goodreads library exported as [Node.js](https://nodejs.org/) modules.
 [![npm version](https://badge.fury.io/js/quotes-goodreads.svg)](https://badge.fury.io/js/quotes-goodreads)
 
-📚 Easily get access to Goodreads quotes. This is a static list, and doesn't make connection to the Goodreads website.
 
 ### Installing
 
