@@ -1,6 +1,6 @@
 {
   "name": "quotes-goodreads",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Easily get static quotes from Goodreads",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,11 @@
   },
   "author": "Sumanto Biswas <sumanto@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "quotes",
+    "goodreads",
+    "inspirational"
+  ],
   "bugs": {
     "url": "https://github.com/sumanto/goodreads-quotes/issues"
   },
