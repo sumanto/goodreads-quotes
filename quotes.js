@@ -17,10 +17,10 @@ function init() {
         flag:'r'
     });
     data = JSON.parse(data);
-    data.sort(function(a, b) {
-        return parseFloat(b.Popularity) - parseFloat(a.Popularity);
-    });
-    data = _.sortedUniqBy(data, 'Quote');
+    // data.sort(function(a, b) {
+    //     return parseFloat(b.Popularity) - parseFloat(a.Popularity);
+    // });
+    // data = _.sortedUniqBy(data, 'Quote');
     length = data.length;
 }
 
@@ -36,7 +36,7 @@ function getRandomQuote() {
 function getRandomStringQuote() {
     init();
 
-    return (getRandomQuote().Quote);
+    return (getRandomQuote().quote);
 }
 
 
@@ -44,7 +44,7 @@ function getRandomStringQuoteWithAuthor() {
     init();
 
     let quote = getRandomQuote();
-    let strQuote = quote.Quote + ' (' + quote.Author + ')';
+    let strQuote = quote.quote + ' (' + quote.author + ')';
     return strQuote;
 }
 
@@ -55,7 +55,7 @@ function getMostPopularQuote(index) {
     if (index) {
         if (_.isInteger(index) && index >= 1 && index < length) {
             let quote = data[index - 1];
-            console.log(quote.Popularity);
+            // console.log(quote.Popularity);
             return quote;
         } else {
             throw new Error('If index is provided, it has to be a integer >= 1 and < ' + length);
@@ -63,7 +63,7 @@ function getMostPopularQuote(index) {
     }
 
     let quote = data[0];
-    console.log(quote.Popularity);
+    // console.log(quote.Popularity);
     return quote;
 }
 
@@ -71,7 +71,7 @@ function getMostPopularQuote(index) {
 function getMostPopularQuotesString(index) {
     init();
 
-    return (getMostPopularQuote(index).Quote);
+    return getMostPopularQuote(index).quote;
 }
 
 
@@ -79,7 +79,7 @@ function getMostPopularQuotesStringWithAuthor(index) {
     init();
 
     let quote = getMostPopularQuote(index);
-    let strQuote = quote.Quote + ' (' + quote.Author + ')';
+    let strQuote = quote.quote + ' (' + quote.author + ')';
     return strQuote;
 }
 
@@ -88,9 +88,9 @@ function quotesByAuthor(author) {
     init();
 
     let byAuthor = _.filter(data, function(o) {
-        return !o.Author.indexOf(author) >= 0;
+        return o.author.indexOf(author) >= 0;
     });
-    return _.map(byAuthor, 'Quote');
+    return _.map(byAuthor, 'quote');
 }
 
 
